@@ -4,15 +4,146 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity" >
+
+    <android.support.v7.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="368dp"
+        android:layout_height="368dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="115dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginBottom="115dp"
+        android:background="@drawable/board"
+        app:columnCount="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rowCount="3">
+
+        <ImageView
+            android:id="@+id/token1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:onClick="tokenDrop"
+            android:tag="0" />
+
+        <ImageView
+            android:id="@+id/token2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="15dp"
+            android:onClick="tokenDrop"
+            android:tag="1" />
+
+        <ImageView
+            android:id="@+id/token3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="15dp"
+            android:onClick="tokenDrop"
+            android:tag="2" />
+
+        <ImageView
+            android:id="@+id/token4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:layout_marginTop="15dp"
+            android:onClick="tokenDrop"
+            android:tag="3" />
+
+        <ImageView
+            android:id="@+id/token5"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:onClick="tokenDrop"
+            android:tag="4" />
+
+        <ImageView
+            android:id="@+id/token6"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:onClick="tokenDrop"
+            android:tag="5" />
+
+        <ImageView
+            android:id="@+id/token7"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:layout_marginTop="15dp"
+            android:onClick="tokenDrop"
+            android:tag="6" />
+
+        <ImageView
+            android:id="@+id/token8"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:onClick="tokenDrop"
+            android:tag="7" />
+
+        <ImageView
+            android:id="@+id/token9"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:onClick="tokenDrop"
+            android:tag="8" />
+
+
+    </android.support.v7.widget.GridLayout>
 
     <TextView
+        android:id="@+id/winnerTextView"
+        android:layout_width="331dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginBottom="42dp"
+        android:gravity="center"
+        android:text="TextView"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/playAgainButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        android:layout_marginStart="176dp"
+        android:layout_marginLeft="176dp"
+        android:layout_marginEnd="176dp"
+        android:layout_marginRight="176dp"
+        android:onClick="playAgain"
+        android:text="Play Again"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/winnerTextView" />
 </android.support.constraint.ConstraintLayout>
